@@ -1,0 +1,44 @@
+2025-11-23T18:57:59.228Z INFO SharedStateManager initialized
+2025-11-23T18:57:59.228Z INFO Is remote: false
+2025-11-23T18:57:59.229Z INFO Starting Local. Installation path: undefined
+2025-11-23T18:57:59.229Z INFO [MainProvider] Creating new MainProvider instance...
+2025-11-23T18:57:59.230Z INFO [TabsManager] Code view listener set up at initialization
+2025-11-23T18:57:59.230Z INFO Installation path exists: /Users/shumin/projects/pybricks/innovation_project/mqtt
+2025-11-23T18:57:59.230Z INFO Initializing database with URL: file:/var/folders/hd/wzs436k50y1b6cgxndlr941w0000gn/T/pythagora-temp/pythagora.db
+2025-11-23T18:57:59.232Z INFO New database detected, running full prisma setup...
+2025-11-23T18:57:59.232Z INFO [/Users/shumin/.vscode/extensions/pythagoratechnologies.pythagora-vs-code-2.6.5] Project root:
+2025-11-23T18:57:59.233Z INFO [/Users/shumin/.vscode/extensions/pythagoratechnologies.pythagora-vs-code-2.6.5/prisma/schema.prisma] Schema path:
+2025-11-23T18:57:59.233Z INFO [file:/var/folders/hd/wzs436k50y1b6cgxndlr941w0000gn/T/pythagora-temp/pythagora.db] Database URL:
+2025-11-23T18:57:59.233Z INFO [true] Schema exists:
+2025-11-23T18:57:59.233Z INFO Running prisma generate first...
+2025-11-23T18:58:05.501Z INFO [Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (6.19.0) to ./src/generated/prisma in 415ms
+
+] Prisma generate result:
+2025-11-23T18:58:05.751Z INFO Running prisma db push to sync schema...
+2025-11-23T18:58:07.833Z INFO [Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "pythagora.db" at "file:/var/folders/hd/wzs436k50y1b6cgxndlr941w0000gn/T/pythagora-temp/pythagora.db"
+
+SQLite database pythagora.db created at file:/var/folders/hd/wzs436k50y1b6cgxndlr941w0000gn/T/pythagora-temp/pythagora.db
+
+🚀  Your database is now in sync with your Prisma schema. Done in 23ms
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[G✔ Generated Prisma Client (6.19.0) to ./src/generated/prisma in 299ms
+
+] Prisma db push result:
+2025-11-23T18:58:07.833Z INFO Database initialized successfully
+2025-11-23T18:58:07.835Z INFO [Migration] Checking for database migration...
+2025-11-23T18:58:08.294Z INFO [Migration] No migration needed
+2025-11-23T18:58:27.717Z INFO [TabsManager] First file opened, triggering split view
+2025-11-23T18:58:27.717Z INFO [MainProvider] First file opened, creating split view
+2025-11-23T18:58:45.390Z INFO [TabsManager] First file opened, triggering split view
+2025-11-23T18:58:45.391Z INFO [MainProvider] First file opened, creating split view
+2025-11-23T19:05:45.594Z INFO [TabsManager] First file opened, triggering split view
+2025-11-23T19:05:45.595Z INFO [MainProvider] First file opened, creating split view
+2025-11-23T19:05:55.197Z INFO [TabsManager] First file opened, triggering split view
+2025-11-23T19:05:55.197Z INFO [MainProvider] First file opened, creating split view
+2025-11-23T19:05:58.536Z INFO [TabsManager] First file opened, triggering split view
+2025-11-23T19:05:58.536Z INFO [MainProvider] First file opened, creating split view
