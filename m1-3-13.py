@@ -14,7 +14,7 @@ def Run(br: BaseRobot):
     br.hub.speaker.beep()
 
     # br.moveLeftAttachmentMotorForDegrees(degrees=55, speedPct=30)
-    br.driveForDistance(distance=800, speedPct=60)
+    br.driveForDistance(distance=820, speedPct=60)
     # br.driveForDistance(distance=-100, speedPct=60)
     # br.driveForDistance(distance=150, speedPct=60)
     # br.driveForDistance(distance=-700, speedPct=60)
@@ -29,9 +29,16 @@ def Run(br: BaseRobot):
     
     # back and go for mission 13
     br.driveForDistance(distance=-200, speedPct=60)
-    br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=50)
+    
     br.turnInPlace(angle=25, speedPct=50)
-    br.driveForDistance(distance=300, speedPct=60)
+    br.driveForDistance(distance=250, speedPct=60)
+    br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=20)
+    # br.turnInPlace(angle=10, speedPct=50)
+    br.driveForDistance(distance=50, speedPct=60)
+    
+    # lift the statue
+    br.moveLeftAttachmentMotorForDegrees(degrees=-90, speedPct=30)
+    
     
     # back home
     br.turnInPlace(angle=-25, speedPct=50)

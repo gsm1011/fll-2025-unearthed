@@ -13,21 +13,22 @@ def Run(br: BaseRobot):
     br.hub.display.number(7)
     br.hub.speaker.beep()
 
+    
     br.driveForDistance(distance=700, speedPct=60)
     br.turnInPlace(angle=50, speedPct=50)
     
     br.driveForDistance(distance=50, speedPct=50)
-    br.moveLeftAttachmentMotorForDegrees(degrees=65, speedPct=30)
-    wait(1000)
+    br.moveLeftAttachmentMotorForDegrees(degrees=150, speedPct=10)
+    wait(600)
     
-    br.driveForDistance(distance=40, speedPct=60)
-    br.moveLeftAttachmentMotorForDegrees(degrees=-125, speedPct=20)
+    br.driveForDistance(distance=35, speedPct=60)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-150, speedPct=20)
     # br.turnInPlace(angle=-45, speedPct=50)
     
     # go back home
     br.driveForDistance(distance=-100, speedPct=80)
     br.turnInPlace(angle=-65, speedPct=50)
-    br.driveForDistance(distance=-600, speedPct=80)
+    br.driveForDistance(distance=-700, speedPct=80)
         
 if __name__ == "__main__":
     br = BaseRobot()
