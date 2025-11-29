@@ -17,7 +17,7 @@ def Run(br: BaseRobot):
     # Mission start indication
     br.hub.light.on(Color.GREEN)
     # br.hub.display.text('1')
-    br.hub.display.number(8)
+    
     br.hub.speaker.beep()
     wait(1000)
     
@@ -27,7 +27,7 @@ def Run(br: BaseRobot):
     
     #mission8
     br.driveForDistance(distance=350, speedPct=60, then=Stop.BRAKE)
-    
+    br.hub.display.number(8)
     for i in range(4):
         br.moveLeftAttachmentMotorForDegrees(degrees=70, speedPct=60)
         br.moveLeftAttachmentMotorForDegrees(degrees=-70, speedPct=10)
@@ -40,19 +40,22 @@ def Run(br: BaseRobot):
     br.driveForDistance(distance=430, speedPct=50)
     br.turnInPlace(angle=110, speedPct=20)
     #ms6
+    br.hub.display.number(6)
     br.moveLeftAttachmentMotorForDegrees(degrees=50, speedPct=20)
     br.turnInPlace(angle=-50, speedPct=30)
     
     #ms5
+    br.hub.display.number(5)
     br.driveForDistance(distance=-40, speedPct=50)
     br.moveLeftAttachmentMotorForDegrees(degrees=20, speedPct=20)
     br.turnInPlace(angle=-50, speedPct=100)
     
     br.turnInPlace(angle=50, speedPct=20)
-    br.turnInPlace(angle=-50, speedPct=100)
+    br.turnInPlace(angle=-60, speedPct=100)
     
-    br.turnInPlace(angle=25, speedPct=20)
+    br.turnInPlace(angle=30, speedPct=20)
     br.moveLeftAttachmentMotorForDegrees(degrees=-70, speedPct=20)
+    br.turnInPlace
     
     
     

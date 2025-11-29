@@ -10,7 +10,7 @@ from base_robot import *
 # "Run(br)" method.
 def Run(br: BaseRobot):
     # Mission start indication
-    br.hub.display.number(4)
+    br.hub.display.number(2)
     br.hub.speaker.beep()
 
     # br.moveLeftAttachmentMotorForDegrees(degrees=55, speedPct=30)

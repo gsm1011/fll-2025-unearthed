@@ -10,7 +10,7 @@ from base_robot import *
 # "Run(br)" method.
 def Run(br: BaseRobot):
     # Mission start indication
-    br.hub.display.number(4)
+    br.hub.display.number(1)
     br.hub.speaker.beep()
 
     # br.moveLeftAttachmentMotorForDegrees(degrees=55, speedPct=30)
@@ -20,6 +20,7 @@ def Run(br: BaseRobot):
     # br.driveForDistance(distance=-700, speedPct=60)
     br.turnInPlace(angle=90, speedPct=50)
     
+    br.hub.display.number(3)
     br.moveLeftAttachmentMotorForDegrees(degrees=90, speedPct=30)
     br.driveForDistance(distance=200, speedPct=60)
     
@@ -28,6 +29,7 @@ def Run(br: BaseRobot):
     # br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=50)
     
     # back and go for mission 13
+    br.hub.display.number(3)
     br.driveForDistance(distance=-200, speedPct=60)
     
     br.turnInPlace(angle=25, speedPct=50)
