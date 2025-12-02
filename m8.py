@@ -11,35 +11,18 @@ from base_robot import *
 def Run(br: BaseRobot):
     # Mission start indication
     br.hub.speaker.beep()
-    br.hub.display.number(1)
-    # Wait for the robot to be ready.
-    # wait(500)
-    
-    # Your mission code goes here, step-by-step
-    # It MUST be indented just like the lines below
-    # straight line test.
-    br.driveForDistance(distance=380, speedPct=80)
+    br.hub.display.number(8)
+
+    br.driveForward(distance=360, speedPct=80)
     
     # hammer to knock the silos.
-    # for i in range(3):
-    #     br.moveLeftAttachmentMotorForDegrees(degrees=45, speedPct=100)
-    #     wait(500)
-    #     br.moveLeftAttachmentMotorForDegrees(degrees=-45, speedPct=100)
-    #     wait(500)
-
-    # Go for the next mission.
-    br.turnInPlace(angle=-45, speedPct=50)
-    br.driveForDistance(distance=350, speedPct=50)
-    br.turnInPlace(angle=90, speedPct=50)
-    br.driveForDistance(distance=60, speedPct=80)
+    for i in range(3):
+        br.lowerLeftArm(degrees=90, speedPct=80)
+        br.raiseLeftArm(degrees=90, speedPct=80)
+        wait(500)
     
-    # Lower arm for levers.
-    br.moveLeftAttachmentMotorForDegrees(degrees=35, speedPct=10)
-    br.turnInPlace(angle=-80, speedPct=80)
-    
-    # MIssion down, get back to home.
-    br.moveLeftAttachmentMotorForDegrees(degrees=-45, speedPct=50)
-    br.driveForDistance(distance=-600, speedPct=80)
+    # Mission done, get back to home.
+    br.driveBackward(distance=360, speedPct=80)
 
     # Mission end indication
     br.hub.speaker.beep()
