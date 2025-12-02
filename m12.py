@@ -19,7 +19,33 @@ def Run(br: BaseRobot):
     br.moveLeftAttachmentMotorForDegrees(degrees=-75, speedPct=30)
     br.driveForDistance(distance=200, speedPct=60)
     
-    br.driveForDistance(distance=-650, speedPct=60)
+    br.driveForDistance(distance=-550, speedPct=60)
+    #going to the other base
+    br.turnInPlace(angle=-20, speedPct=50)
+    br.driveForDistance(distance=700, speedPct=60)
+    br.turnInPlace(angle=-15, speedPct=50)
+    br.driveForDistance(distance=250, speedPct=60)
+    #hit mission 10
+    br.moveLeftAttachmentMotorForDegrees(degrees=90, speedPct=30)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-90, speedPct=30)
+    br.turnInPlace(angle=-15, speedPct=50)
+    br.moveLeftAttachmentMotorForDegrees(degrees=90, speedPct=30)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-90, speedPct=30)
+    br.turnInPlace(angle=-15, speedPct=50)
+    br.moveLeftAttachmentMotorForDegrees(degrees=90, speedPct=30)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-90, speedPct=30)
+    br.turnInPlace(angle=30, speedPct=50)
+    
+    
+    #back home
+    br.driveForDistance(distance=-250, speedPct=60)
+    br.turnInPlace(angle=35, speedPct=50)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-60, speedPct=30)
+    br.driveForDistance(distance=1000, speedPct=60)
+    br.turnInPlace(angle=90, speedPct=50)
+    br.driveForDistance(distance=100, speedPct=60)
+    
+    
     
     wait(1000)
         
