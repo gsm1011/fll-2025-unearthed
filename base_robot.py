@@ -342,6 +342,12 @@ class BaseRobot:
             speed=speed, rotation_angle=degrees, wait=waiting
         )
 
+    def lowerLeftArm(self, degrees: int, speedPct: int = 50):
+        self.moveLeftAttachmentMotorForDegrees(degrees=degrees, speedPct=speedPct)
+    
+    def raiseLeftArm(self, degrees: int, speedPct: int = 50):
+        self.moveLeftAttachmentMotorForDegrees(degrees=-degrees, speedPct=speedPct)
+        
     def moveRightAttachmentMotorForMillis(
         self,
         millis: int,
@@ -412,6 +418,12 @@ class BaseRobot:
             wait(25)
         self.rightAttachmentMotor.hold()
 
+    def lowerRightArm(self, degrees: int, speedPct: int = 50):
+        self.moveRightAttachmentMotorForDegrees(degrees=degrees, speedPct=speedPct)
+    
+    def raiseRightArm(self, degrees: int, speedPct: int = 50):
+        self.moveRightAttachmentMotorForDegrees(degrees=-degrees, speedPct=speedPct)
+        
     def driveForDistance(
         self,
         distance: int,
@@ -476,7 +488,21 @@ class BaseRobot:
             straight_acceleration=acceleration, straight_speed=speed
         )
         self.robot.straight(distance, then, waiting)
-
+        
+    def driveForward(
+        self,
+        distance: int,
+        speedPct: int = DEFAULT_BIG_MOT_SPEED_PCT
+    ):
+        self.driveForDistance(distance=distance, speedPct=speedPct)
+        
+    def driveBackward(
+        self,
+        distance: int,
+        speedPct: int = DEFAULT_BIG_MOT_SPEED_PCT
+    ):
+        self.driveForDistance(distance=-distance, speedPct=speedPct)
+        
     def driveForMillis(
         self,
         millis: int,
@@ -627,6 +653,112 @@ class BaseRobot:
         )
         self.robot.turn(angle, then, waiting)
 
+    def turnLeftInPlace(
+        self,
+        angle: int,
+        speedPct: int = DEFAULT_TURN_SPEED_PCT,
+        gyro: bool = True,
+        waiting: bool = True,
+        then: Stop = Stop.BRAKE,
+        accelerationPct: int = DEFAULT_TURN_ACCEL_PCT,
+    ):
+        """Turn the robot left in place by a specified angle
+
+        Snippet: tlip
+
+        Example:
+        >>> turnLeftInPlace(90) # turn 90 degrees left
+        >>> turnLeftInPlace(45, speedPct=30) # slow 45 degree turn
+
+        Args:
+
+        angle (REQUIRED integer): How many degrees to turn left.
+
+        speedPct: (OPTIONAL integer, -100 to 100, except 0): Controls how fast \
+        the robot will turn. Positive numbers turn the robot to the right; \
+        negative numbers turn it to the left. Default is DEFAULT_TURN_SPEED_PCT.
+
+        gyro: (OPTIONAL bool): Use the gyro. Defaults to True. Rarely set to \
+        False only when you do not want to use the gyro for some reason
+
+        waiting: (OPTIONAL bool): this tells the robot if it should wait for \
+        the next line of code or run both lines of code at the same time. \
+        Default is True, which means wait on this line until it is \
+        complete.
+
+        then: (OPTIONAL, Stop.HOLD|Stop.BRAKE|Stop.NONE|Stop.COAST): What the \
+        drive motors will do after the robot has turned in place. \
+        Stop.BRAKE (Default), Passively resist small external forces. \
+        Stop.HOLD, Keep controlling the motor to hold it at the commanded \
+        angle. \
+        Stop.COAST, Allow the motor to coast freely until it stops. \
+        Stop.NONE, Do not control the motor at all (use when chaining drive \
+            commands).
+
+        accelerationPct: (OPTIONAL int > 0) How fast the robot accelerates
+        """
+        self.turnInPlace(
+            angle=-angle,
+            speedPct=speedPct,
+            gyro=gyro,
+            waiting=waiting,
+            then=then,
+            accelerationPct=accelerationPct,
+        )
+        
+    def turnRightInPlace(
+        self,
+        angle: int,
+        speedPct: int = DEFAULT_TURN_SPEED_PCT,
+        gyro: bool = True,
+        waiting: bool = True,
+        then: Stop = Stop.BRAKE,
+        accelerationPct: int = DEFAULT_TURN_ACCEL_PCT,
+    ):
+        """Turn the robot right in place by a specified angle
+
+        Snippet: trip
+
+        Example:
+        >>> turnRightInPlace(90) # turn 90 degrees right
+        >>> turnRightInPlace(45, speedPct=30) # slow 45 degree turn
+
+        Args:
+
+        angle (REQUIRED integer): How many degrees to turn right.
+
+        speedPct: (OPTIONAL integer, -100 to 100, except 0): Controls how fast \
+        the robot will turn. Positive numbers turn the robot to the right; \
+        negative numbers turn it to the left. Default is DEFAULT_TURN_SPEED_PCT.
+
+        gyro: (OPTIONAL bool): Use the gyro. Defaults to True. Rarely set to \
+        False only when you do not want to use the gyro for some reason
+
+        waiting: (OPTIONAL bool): this tells the robot if it should wait for \
+        the next line of code or run both lines of code at the same time. \
+        Default is True, which means wait on this line until it is \
+        complete.
+
+        then: (OPTIONAL, Stop.HOLD|Stop.BRAKE|Stop.NONE|Stop.COAST): What the \
+        drive motors will do after the robot has turned in place. \
+        Stop.BRAKE (Default), Passively resist small external forces. \
+        Stop.HOLD, Keep controlling the motor to hold it at the commanded \
+        angle. \
+        Stop.COAST, Allow the motor to coast freely until it stops. \
+        Stop.NONE, Do not control the motor at all (use when chaining drive \
+            commands).
+
+        accelerationPct: (OPTIONAL int > 0) How fast the robot accelerates
+        """
+        self.turnInPlace(
+            angle=angle,
+            speedPct=speedPct,
+            gyro=gyro,
+            waiting=waiting,
+            then=then,
+            accelerationPct=accelerationPct,
+        )
+        
     def curve(
         self,
         radius: int,
