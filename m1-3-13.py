@@ -21,15 +21,15 @@ def Run(br: BaseRobot):
     br.turnInPlace(angle=90, speedPct=50)
     
     br.hub.display.number(3)
-    br.moveLeftAttachmentMotorForDegrees(degrees=90, speedPct=30)
+    br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=30)
     br.driveForDistance(distance=200, speedPct=60)
     
     # do the lift
-    br.moveLeftAttachmentMotorForDegrees(degrees=-120, speedPct=30)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-120, speedPct=100)
     # br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=50)
     
     # back and go for mission 13
-    br.hub.display.number(3)
+    br.hub.display.number(13)
     br.driveForDistance(distance=-200, speedPct=60)
     
     br.turnInPlace(angle=25, speedPct=50)
@@ -46,7 +46,7 @@ def Run(br: BaseRobot):
     br.turnInPlace(angle=-25, speedPct=50)
     br.driveForDistance(distance=-300, speedPct=60)
     br.turnInPlace(angle=-90, speedPct=50)
-    br.driveForDistance(distance=-650, speedPct=60)
+    br.driveForDistance(distance=-700, speedPct=60)
     
     return
     wait(1000)
