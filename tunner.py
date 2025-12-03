@@ -8,12 +8,7 @@ def Run(br: BaseRobot):
     br.hub.display.number(0)
     # Wait for the robot to be ready.
     # wait(500)
-    
-    # br.robot.straight(-10)
-    # br.robot.reset()
-    # wave hand test
-    # br.rightAttachmentMotor.reset_angle()
-    # CNT = 3
+
     br.moveLeftAttachmentMotorForDegrees(degrees=-30)
     br.leftAttachmentMotor.reset_angle()
     

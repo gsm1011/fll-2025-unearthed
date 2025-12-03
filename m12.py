@@ -13,7 +13,6 @@ def Run(br: BaseRobot):
     br.hub.display.number(12)
     br.hub.speaker.beep()
 
-    # br.moveLeftAttachmentMotorForDegrees(degrees=55, speedPct=30)
     br.driveForward(distance=440, speedPct=60)
     br.driveBackward(distance=150, speedPct=60)
     br.raiseLeftArm(degrees=120, speedPct=30)
