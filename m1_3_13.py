@@ -13,34 +13,34 @@ def Run(br: BaseRobot):
     br.hub.display.number(1)
     br.hub.speaker.beep()
 
-    br.driveForward(distance=820, speedPct=60)
+    br.driveForward(distance=790, speedPct=60)
     br.turnRightInPlace(angle=90, speedPct=50)
     
     br.hub.display.number(3)
     br.lowerLeftArm(degrees=120, speedPct=30)
-    br.driveForward(distance=200, speedPct=60)
+    br.driveForward(distance=230, speedPct=60)
     
     # lift the cart
-    br.raiseLeftArm(degrees=150, speedPct=30)
+    br.raiseLeftArm(degrees=150, speedPct=20)
     
     # back and go for mission 13
     br.hub.display.number(13)
-    br.driveBackward(distance=200, speedPct=60)
-    
-    br.turnRightInPlace(angle=28, speedPct=50)
-    br.driveForward(distance=250, speedPct=60)
+    br.driveBackward(distance=50, speedPct=60)
+    br.turnRightInPlace(angle=32, speedPct=50)
+    br.driveForward(distance=110, speedPct=60)
     br.lowerLeftArm(degrees=120, speedPct=20)
-    br.driveForward(distance=50, speedPct=60)
-    
+    br.driveForward(distance=70, speedPct=60)
+
     # lift the statue
-    br.raiseLeftArm(degrees=90, speedPct=30)
+    br.raiseLeftArm(degrees=120, speedPct=40)
+    wait(500)
     
     # back home
     br.hub.display.char('H')
     br.turnLeftInPlace(angle=23, speedPct=50)
     # br.curve(radius=350, angle=-120, speedPct=50)
     br.driveBackward(distance=300, speedPct=60)
-    br.turnLeftInPlace(angle=90, speedPct=50)
+    br.turnLeftInPlace(angle=100, speedPct=50)
     br.driveBackward(distance=700, speedPct=60)
     
     return
