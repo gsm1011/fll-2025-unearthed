@@ -15,7 +15,8 @@ was_pressed = set()
 hub.system.set_stop_button((Button.CENTER, Button.BLUETOOTH))
 
 br = BaseRobot()
-# Main program loop
+br.hub.speaker.beep()
+
 while True:
     # Display the current number on the hub matrix
     hub.display.number(current_number)
