@@ -15,30 +15,28 @@ def Run(br: BaseRobot):
 
     # Moving backwards
     br.hub.display.number(9)
-    br.driveForDistance(distance=-120, speedPct=60)
-    br.turnInPlace(angle=-45, speedPct=50)
-    br.driveForDistance(distance=-270, speedPct=60)
-    br.moveRightAttachmentMotorForDegrees(degrees=90, speedPct=10)
-    br.moveRightAttachmentMotorForDegrees(degrees=-90, speedPct=10)
+    br.driveForward(distance=110, speedPct=60)
+    br.turnLeftInPlace(angle=50, speedPct=50)
+    br.driveForward(distance=355, speedPct=60)
+    br.lowerLeftArm(degrees=90, speedPct=10)
+    br.raiseLeftArm(degrees=90, speedPct=10)
     
     
     # Go for mission 10
     br.hub.display.number(10)
-    
-    br.driveForDistance(distance=180, speedPct=40)
-    br.turnInPlace(angle=-45, speedPct=40)
-    br.driveForDistance(distance=-440, speedPct=40)
-    br.turnInPlace(angle=90, speedPct=40)
+    br.driveBackward(distance=185, speedPct=40)
+    br.turnLeftInPlace(angle=45, speedPct=40)
+    br.driveForward(distance=460, speedPct=40)
+    br.turnRightInPlace(angle=90, speedPct=40)
     
     # down the hook and grab the cart
-    br.driveForDistance(distance=-60, speedPct=40)
-    #br.turnInPlace(angle=-10, speedPct=20)
-    br.moveRightAttachmentMotorForDegrees(degrees=90, speedPct=20)
+    br.driveForward(distance=83, speedPct=40)
+    br.lowerLeftArm(degrees=90, speedPct=20)
     
     # Drive back home with the cart
-    br.driveForDistance(distance=80, speedPct=40)
-    br.turnInPlace(angle=-80, speedPct=40)
-    br.driveForDistance(distance=710, speedPct=100)
+    br.driveBackward(distance=98, speedPct=40)
+    br.turnLeftInPlace(angle=85, speedPct=40)
+    br.driveBackward(distance=710, speedPct=100)
 
     # wait(1000)
         
