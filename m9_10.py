@@ -36,7 +36,7 @@ def Run(br: BaseRobot):
     # Drive back home with the cart
     br.driveBackward(distance=98, speedPct=40)
     br.turnLeftInPlace(angle=85, speedPct=40)
-    br.driveBackward(distance=710, speedPct=100)
+    br.driveBackward(distance=725, speedPct=100)
 
     # wait(1000)
         

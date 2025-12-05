@@ -13,20 +13,29 @@ def Run(br: BaseRobot):
     br.hub.display.number(2)
     br.hub.speaker.beep()
 
-    br.driveForward(distance=690, speedPct=60)
-    br.turnLeftInPlace(angle=45, speedPct=50)
-    br.driveBackward(distance=50, speedPct=100)
-    wait(500)
-    br.driveForward(distance=80, speedPct=100)
-    br.raiseLeftArm(degrees=75, speedPct=20)
+    # br.driveForward(distance=690, speedPct=60)
+    br.driveForward(distance=500, speedPct=60)
+    br.turnRightInPlace(angle=45, speedPct=50)  
+    br.driveForward(distance=268, speedPct=60)
+
+    br.turnLeftInPlace(angle=90, speedPct=50)
     
+    br.driveBackward(distance=40, speedPct=100)
+    br.lowerLeftArm(degrees=60, speedPct=20)
+    wait(500)
+    
+    br.driveForward(distance=50, speedPct=100)
+    br.raiseLeftArm(degrees=120, speedPct=20)
+    
+    wait(500)
+    # return
     # push soil back
-    br.driveForward(distance=220, speedPct=60)
+    br.driveForward(distance=220, speedPct=80)
     
     br.driveBackward(distance=200, speedPct=100)
     
     # drive home
-    br.turnRightInPlace(angle=55, speedPct=100)
+    br.turnRightInPlace(angle=60, speedPct=100)
     br.driveBackward(distance=750, speedPct=100)
     
 if __name__ == "__main__":
