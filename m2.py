@@ -18,7 +18,7 @@ def Run(br: BaseRobot):
     br.turnRightInPlace(angle=45, speedPct=50)  
     br.driveForward(distance=268, speedPct=60)
 
-    br.turnLeftInPlace(angle=90, speedPct=50)
+    br.turnLeftInPlace(angle=89, speedPct=50)
     
     br.driveBackward(distance=40, speedPct=100)
     br.lowerLeftArm(degrees=60, speedPct=20)
@@ -27,10 +27,10 @@ def Run(br: BaseRobot):
     br.driveForward(distance=50, speedPct=100)
     br.raiseLeftArm(degrees=120, speedPct=20)
     
-    wait(500)
+    # wait(500)
     # return
     # push soil back
-    br.driveForward(distance=220, speedPct=80)
+    br.driveForward(distance=230, speedPct=80)
     
     br.driveBackward(distance=200, speedPct=100)
     
