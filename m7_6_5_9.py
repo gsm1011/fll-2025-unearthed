@@ -17,11 +17,11 @@ def Run(br: BaseRobot):
     br.turnLeftInPlace(angle=15, speedPct=50)
 
     br.driveForward(distance=650, speedPct=60)
-    br.turnRightInPlace(angle=58, speedPct=50)
+    br.turnRightInPlace(angle=59, speedPct=50)
     #br.driveForward(distance=30, speedPct=50)
     br.driveBackward(distance=20, speedPct=50)
     br.lowerLeftArm(degrees=90, speedPct=5)
-    br.driveForward(distance=75, speedPct=50)
+    br.driveForward(distance=70, speedPct=50)
     br.raiseLeftArm(degrees=170, speedPct=20)
     
     br.hub.display.number(6)
@@ -29,24 +29,26 @@ def Run(br: BaseRobot):
     
     br.hub.display.number(5)
     br.driveBackward(distance=100, speedPct=50)
-    br.turnLeftInPlace(angle=15, speedPct=50)
-    br.driveForward(distance=150, speedPct=50)
-    br.turnLeftInPlace(angle=45, speedPct=50)
+    br.turnLeftInPlace(angle=22, speedPct=50)
+    br.driveForward(distance=138, speedPct=50)
+    
+    br.turnLeftInPlace(angle=31, speedPct=50)
+    br.turnRightInPlace(angle=10, speedPct=50)
     
     br.hub.display.number(9)
     br.driveBackward(distance=50, speedPct=60)
-    br.turnLeftInPlace(angle=50, speedPct=50)
-    br.driveForward(distance=400, speedPct=60)
-    br.turnRightInPlace(angle=24, speedPct=50)
-    br.driveBackward(distance=300, speedPct=60)
+    br.turnLeftInPlace(angle=52, speedPct=50)
+    
+    br.driveForward(distance=440, speedPct=60)
+    br.turnRightInPlace(angle=17, speedPct=50)
+    br.driveBackward(distance=300, speedPct=50)
     
     # go home.
     br.hub.display.char('H')
-    br.driveForward(distance=200, speedPct=60)
+    br.driveForward(distance=150, speedPct=60)
     br.turnLeftInPlace(angle=35, speedPct=50)
-    
-    br.curve(radius=-500, angle=-60, speedPct=150)
-    br.driveBackward(distance=500, speedPct=60)
+    br.curve(radius=-620, angle=-70, speedPct=150)
+    br.driveBackward(distance=300, speedPct=60)
         
 if __name__ == "__main__":
     br = BaseRobot()
