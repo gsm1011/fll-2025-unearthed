@@ -15,7 +15,7 @@ def Run(br: BaseRobot):
 
     # Moving backwards
     br.hub.display.number(9)
-    br.driveForward(distance=110, speedPct=60)
+    br.driveForward(distance=100, speedPct=60)
     br.turnLeftInPlace(angle=50, speedPct=50)
     br.driveForward(distance=355, speedPct=60)
     br.lowerLeftArm(degrees=90, speedPct=10)

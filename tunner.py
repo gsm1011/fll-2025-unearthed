@@ -9,13 +9,8 @@ def Run(br: BaseRobot):
     # Wait for the robot to be ready.
     # wait(500)
 
-    br.moveLeftAttachmentMotorForDegrees(degrees=-30)
-    br.leftAttachmentMotor.reset_angle()
-    
-    br.moveRightAttachmentMotorForDegrees(speedPct=-30)
-    br.rightAttachmentMotor.reset_angle()
-
     br.hub.speaker.beep()
+    br.hub.speaker.beep(330, 200)
     
 if __name__ == "__main__":
     br = BaseRobot()

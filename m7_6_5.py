@@ -16,7 +16,7 @@ def Run(br: BaseRobot):
     br.driveForward(distance=50, speedPct=60)
     br.turnLeftInPlace(angle=15, speedPct=50)
 
-    br.driveForward(distance=650, speedPct=60)
+    br.driveForward(distance=640, speedPct=60)
     br.turnRightInPlace(angle=59, speedPct=50)
     #br.driveForward(distance=30, speedPct=50)
     br.driveBackward(distance=20, speedPct=50)
@@ -25,7 +25,7 @@ def Run(br: BaseRobot):
     br.raiseLeftArm(degrees=170, speedPct=20)
     
     br.hub.display.number(6)
-    br.turnLeftInPlace(angle=23, speedPct=50)
+    br.turnLeftInPlace(angle=22, speedPct=50)
     
     br.hub.display.number(5)
     br.driveBackward(distance=100, speedPct=50)
